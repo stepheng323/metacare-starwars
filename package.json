@@ -11,7 +11,6 @@
     "migration": "sequelize db:migrate",
     "migration:rollback": "sequelize db:migrate:undo:all",
     "migration:refresh": "npm run migration:rollback && npm run migration"
-
   },
   "keywords": [
     "starwars"
@@ -30,7 +29,8 @@
     "sequelize-cli": "^6.2.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.13",
-    "@babel/register": "^7.15.3"
+    "@babel/register": "^7.15.3",
+    "@babel/core": "^7.15.5",
+    "nodemon": "^2.0.13"
   }
 }
