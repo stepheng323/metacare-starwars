@@ -6,7 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/index.js",
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "build": "npm run migration",
+    "migration": "sequelize db:migrate",
+    "migration:rollback": "sequelize db:migrate:undo:all",
+    "migration:refresh": "npm run migration:rollback && npm run migration"
+
   },
   "keywords": [
     "starwars"
